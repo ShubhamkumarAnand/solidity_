@@ -1,2 +1,2 @@
-//  Assigning the value of the  solidity version  to  be used.
-pragma solidity >= 0.8.7;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.7;
