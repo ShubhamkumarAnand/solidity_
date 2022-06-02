@@ -1,4 +1,4 @@
-    /*
+/*
         Solidity contains the License of the contract
         The version which is needed to  be  used must be specified by using the operators.
     */
@@ -30,10 +30,10 @@ contract SimpleStorage {
     }
 
     function retrieve() public view returns (uint256) {
-        returns favoriteNumber;
+        return favoriteNumber;
     }
 
     function add() public pure returns (uint256) {
-        returns (1+6);
+        return (1 + 6);
     }
 }
