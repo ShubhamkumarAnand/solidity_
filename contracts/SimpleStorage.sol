@@ -40,6 +40,8 @@ contract SimpleStorage {
         Storage -> Permanent variable that can be modified
         ! NOTE ->  these EVM are applied only when there is an array.
      */
+
+    // This function will cost gas
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         /*
             People newPerson = People({
@@ -52,15 +54,17 @@ contract SimpleStorage {
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 
+    // This function will cost gas
+    function store(uint256 _favoriteNumber) public {
+        favoriteNumber = _favoriteNumber;
+    }
+
     /*
         Only view and Pure function doesn't  costs gas.
         View function doesn't allows the modification of the state
         when the view function run inside the store function it will cost gas
         Pure function doesn't allows reading as well as changing of any data in the blockchain
     */
-    function store(uint256 _favoriteNumber) public {
-        favoriteNumber = _favoriteNumber;
-    }
 
     function retrieve() public view returns (uint256) {
         return favoriteNumber;
