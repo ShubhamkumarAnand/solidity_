@@ -25,6 +25,9 @@ contract SimpleStorage {
         string name;
     }
 
+    //  Mapping of the variable
+    mapping(string => uint256) public nameToFavoriteNumber;
+
     uint256[] favoriteNumber; // Dynamic Array -> without any specification of memory.
     // People public person = People({favoriteNumber: 11, name: "Shubham"});
 
@@ -46,6 +49,7 @@ contract SimpleStorage {
         People.push(newPerson);
          */
         person.push(People(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 
     /*
