@@ -1,6 +1,8 @@
+// Solidity Basics
+
 /*
         Solidity contains the License of the contract
-        The version which is needed to  be  used must be specified by using the operators.
+        The version which is needed to  be  used must be specified by using the operators Greater then , smaller than and in Between.
     */
 
 // SPDX-License-Identifier: MIT
@@ -29,6 +31,12 @@ contract SimpleStorage {
     //  Creating a Dynamic Array of People variable
     People[] public person;
 
+    /*
+        calldata -> Temporary variable that cannot be modified
+        memory -> Temporary variable that can be modified
+        Storage -> Permanent variable that can be modified
+        ! NOTE ->  these EVM are applied only when there is an array.
+     */
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         /*
             People newPerson = People({
