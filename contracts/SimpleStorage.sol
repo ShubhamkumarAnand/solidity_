@@ -17,7 +17,28 @@ contract SimpleStorage {
         Bytes is converted to  hexadecimal like 0x and max size is byte32
    */
 
-    uint256 favoriteNumber = 5;
+    // The custom data type people defined. These are auto indexed to 0,1 etc
+    struct People {
+        uint256 favoriteNumber;
+        string name;
+    }
+
+    uint256[] favoriteNumber; // Dynamic Array -> without any specification of memory.
+    // People public person = People({favoriteNumber: 11, name: "Shubham"});
+
+    //  Creating a Dynamic Array of People variable
+    People[] public person;
+
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        /*
+            People newPerson = People({
+            favoriteNumber: _favoriteNumber,
+            name: _name
+        });
+        People.push(newPerson);
+         */
+        person.push(People(_favoriteNumber, _name));
+    }
 
     /*
         Only view and Pure function doesn't  costs gas.
