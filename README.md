@@ -1,5 +1,7 @@
 # Solidity Programming Language
 
+This repository contains all the code regarding to Solidity Learning.
+
 ## Deployed first contract
 
 ---
