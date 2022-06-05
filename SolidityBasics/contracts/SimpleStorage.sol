@@ -3,6 +3,7 @@
 /*
         Solidity contains the License of the contract
         The version which is needed to  be  used must be specified by using the operators Greater then , smaller than and in Between.
+        The whole code is compiled down to the Ethereum Virtual machine
     */
 
 // SPDX-License-Identifier: MIT
